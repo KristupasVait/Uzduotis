@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return View::make('layouts.master');
+
+    $books = DB::table('books')->get();
+
+
+   return View('layouts.master', compact('books'));
 });
