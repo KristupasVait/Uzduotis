@@ -26,6 +26,28 @@
     </div>
 </nav>
 
+<ul class="nav nav-tabs">
+    <li class="active">
+        <a href="#">Home</a>
+    </li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">...</a></li>
+</ul>
+
+<ul class="nav nav-pills">
+    <li class="dropdown">
+        <a class="dropdown-toggle"
+           data-toggle="dropdown"
+           href="#">
+            Dropdown
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <!-- links -->
+        </ul>
+    </li>
+</ul>
+
 @yield('master')
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
