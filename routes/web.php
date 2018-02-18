@@ -13,8 +13,27 @@
 
 Route::get('/', function () {
 
-    $books = DB::table('books')->get();
+    $books = DB::table('books')->paginate(10);
 
 
    return View('layouts.master', compact('books'));
+});
+
+Route::get('books/{books}', function($id){
+
+    $x = DB::table('books')->find($id);
+
+   // dd($book);
+    return View('book', compact('x'));
+});
+
+
+Route::post('/', 'OffersController@store');
+
+
+Route::get('/offers', function () {
+
+    $offers = DB::table('offers')->get();
+
+    return View('offers', compact('offers'));
 });

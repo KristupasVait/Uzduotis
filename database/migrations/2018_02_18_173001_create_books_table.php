@@ -17,7 +17,8 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('author_id');
-            $table->integer('genre_id');
+            $table->integer('category_id');
+            $table->decimal('price');
             $table->timestamps();
         });
     }

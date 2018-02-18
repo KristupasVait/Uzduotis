@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\offers;
+use App\Books;
 use Illuminate\Http\Request;
 
 class OffersController extends Controller
@@ -35,7 +36,25 @@ class OffersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$offer = new offers();
+
+
+       // $offer->email = request('email');
+
+        //$offer->quantity = request('quantity');
+
+      //  $offer->book_id = request('book_id');
+
+       // $offer->save();
+
+        offers::create(
+        [
+            'email' => request('email'),
+            'quantity' => request('quantity'),
+            'book_name' => request('book_name')
+        ]);
+
+        return redirect('/');
     }
 
     /**

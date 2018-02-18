@@ -16,7 +16,8 @@ class CreateOffersTable extends Migration
         Schema::create('offers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
-            $table->integer('book_id');
+            $table->string('book_name');
+            $table->integer('quantity');
             $table->timestamps();
         });
     }
